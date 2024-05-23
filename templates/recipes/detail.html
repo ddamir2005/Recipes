@@ -1,0 +1,53 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+  <title>Описание рецепта</title>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-5">Описание рецепта</h1>
+    </div>
+  </div>
+
+  <div class="row">
+      <table class="table table-striped table-hover">
+        <tbody>
+          <tr>
+            <th scope="row">Название рецепта</th>
+            <td colspan="2">{{recipe.title}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Ингридиенты</th>
+            <td colspan="2">{{recipe.ingredients}}</td>
+          </tr>
+           <tr>
+            <th scope="row">Способ приготовления</th>
+            <td colspan="2">{{recipe.cooking}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Дата публикации</th>
+            <td colspan="2">{{recipe.date_posted}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Автор</th>
+            <td colspan="2"><a href="/user/{{recipe.owner_id}}">{{recipe.owner_name}}</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Рейтинг автора
+              <a class="navbar-brand" href="/recipes/rate/{{recipe.id}}">
+                <i class="fas fa-thumbs-up"></i>
+              </a>
+            </th>
+            <td colspan="2">{{recipe.owner_rating}}</td>
+          </tr>
+
+
+        </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

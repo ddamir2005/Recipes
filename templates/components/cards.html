@@ -1,0 +1,8 @@
+<div class="card shadow p-3 mb-2 bg-body rounded" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{obj.title}}</h5>
+    <p class="card-text">Ингридиенты : {{obj.ingredients[:60]}}</p>
+    <p class="card-text">Способ приготовления : {{obj.cooking[:60]}}</p>
+    <a href="/details/{{obj.id}}" class="btn btn-primary">Подробнее</a>
+  </div>
+</div>

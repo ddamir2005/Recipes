@@ -1,0 +1,43 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+  <title>Профиль</title>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-5">Профиль</h1>
+    </div>
+  </div>
+
+  <div class="row">
+      <table class="table table-striped table-hover">
+        <tbody>
+          <tr>
+            <th scope="row">Имя пользователя</th>
+            <td colspan="2">{{user.username}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td colspan="2">{{user.email}}</td>
+          </tr>
+          <tr>
+            <th scope="row">О Себе</th>
+            <td colspan="2">{{user.description}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Фото</th>
+            <td colspan="2"><img src="{{user.photo}}" /></td>
+          </tr>
+          <tr>
+            <th scope="row">Рейтинг</th>
+            <td colspan="2">{{user.rating}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
